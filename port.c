@@ -38,6 +38,13 @@ uint8_t REG_COILS_BUF[REG_COILS_SIZE] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 1};
 uint8_t REG_DISC_BUF[REG_DISC_SIZE] = {1, 1, 1, 1, 0, 0, 0, 0, 1, 1};
 
 /// 04命令处理回调函数
+/**
+ * @description: 
+ * @param {UCHAR} *pucRegBuffer
+ * @param {USHORT} usAddress
+ * @param {USHORT} usNRegs
+ * @return {*}
+ */
 eMBErrorCode eMBRegInputCB(UCHAR *pucRegBuffer, USHORT usAddress, USHORT usNRegs)
 {
     USHORT usRegIndex = usAddress - 1;
